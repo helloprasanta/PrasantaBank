@@ -254,7 +254,7 @@ function validemlpwd()
 	</form>
 
 	<form method="get" action="./usercreate.jsp">
-		<input type="submit" value="CREATE USER" name="btn-crt">
+		<input type="submit" value="CREATE  NEW USER" name="btn-crt">
 	</form>
 
 	</div>
