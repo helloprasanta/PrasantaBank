@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>CREATE USER</title>
+<style type="text/css">
+
+
+body {
+      font-family: "Consolas";
+      margin: 0;
+      text-align: justify;
+      
+       
+    }
+    
+     header {
+      background-color: silver; ;
+      padding: 2px;
+      color: black;
+      text-align: center;
+    }
+
+
+label { float: left; width: 300px; color: black; font-weight: bold;      margin-left: 5px; padding-top: 12px;}
+input[type=text] { float: left; width: 400px;     margin-left: 150px;       padding-top: 5px;
+    margin-top: -16px; }
+input[type=password] { float: left; width: 400px;
+    
+        margin-left: 150px;
+    
+        padding-top: 5px;
+    margin-top: -16px;
+        
+    }
+
+.button {
+width: 150px;
+text-align: center;
+height: 30px;
+background-color: #4CAF50; /* Green */
+border: none;
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+
+cursor: pointer;
+
+
+
+}
+.button:hover {
+    background-color: blue; /* Green */
+    color: white;
+
+}
+
+
+
+.parent{
+  text-align:center
+}
+    
+    .footer {
+   position: fixed;
+   left: 0;
+   bottom: 20px;
+   width: 100%;
+   background-color:black;
+   color: #1cd4b3;
+   text-align: center;
+}
+
+#date_time{
+text-align: center;
+color: black;
+font-weight: bold;
+
+}
+
+#lower {
+   
+    width: 100%;
+    height: 69px;
+    margin-top: 2px;
+	box-shadow: inset 0 1px 1px #fff;
+    border-top: 1px solid #ccc;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    
+}
+
+#container {
+    position: fixed;
+    width: 574px;
+    height: 275px;
+    top: 50%;
+    left: 42%;
+    margin-top: -140px;
+    margin-left: -170px;
+	background: #c5f7fb;
+    border-radius: 22px;
+    border: 5px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	
+}
+
+
+input[type=text]{
+
+font-weight: bold;
+     font-size: small;
+        margin-left: 150px;
+
+}
+
+
+  input[type=submit] {
+      float: right;
+    margin-right: 21px;
+    margin-top: 30px;
+    width: 100px;
+    height: 31px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background: white;
+}
+
+input[type=reset] {
+       float: right;
+    margin-right: 20px;
+    margin-top: 30px;
+    width: 80px;
+    height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+    background: white;
+}
+
+.parent{
+  text-align:center;
+  margin-right: 20px;
+   margin-top: 60px;
+width: 550px;
+    height: 30px;
+  
+}
+
+
+
+
+</style>
+
+
+
+
+<script type="text/javascript">
+
+
+var check = function() {
+    if (document.getElementById('password').value ==
+        document.getElementById('confirm_password').value) {
+        document.getElementById('message').style.color = 'green';
+        document.getElementById('message').innerHTML = 'MATCHED';
+        document.getElementById("btn").disabled = false;
+    } else {
+    		document.getElementById('message').style.color = 'red';
+        document.getElementById('message').innerHTML = 'NOT MATCHING';
+        document.getElementById("btn").disabled = true;
+    }
+}
+
+
+function validateForm() {
+    var x = document.forms["myForm"]["pwd"].value;
+    var y = document.forms["myForm"]["cnfpwd"].value;
+    if (x==y) {
+     
+    }
+        else
+        	{
+        	alert("Password Not Matched");      
+        	}
+    }
+
+  
+    
+    
+
+
+function date_time(id)
+{
+        date = new Date;
+        year = date.getFullYear();
+        month = date.getMonth();
+        months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+        d = date.getDate();
+        day = date.getDay();
+        days = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
+        h = date.getHours();
+        if(h<10)
+        {
+                h = "0"+h;
+        }
+        m = date.getMinutes();
+        if(m<10)
+        {
+                m = "0"+m;
+        }
+        s = date.getSeconds();
+        if(s<10)
+        {
+                s = "0"+s;
+        }
+        result = ''+days[day]+' '+months[month]+' '+d+' '+year+' '+h+':'+m+':'+s;
+        document.getElementById(id).innerHTML = result;
+        setTimeout('date_time("'+id+'");','1000');
+        return true;
+}
+
+
+
+
+
+
+</script>
+    
+    
+    
+
+
+</head>
+<body bgcolor="#E6E6FA">
+<form  name="myForm" action="./afterusercreate.jsp" onsubmit="validateForm()" method="post">
+ 
+ <h1 align="center">Welcome To Odisha Bank</h1>
+    
+ <div id="date_time">
+ <script type="text/javascript">window.onload = date_time('date_time');</script>
+ </div>
+  
+ 
+
+<h3 align="center"><marquee behavior="scroll" direction="left">A complete banking solution</marquee></h3><br><br><br>
+    
+    
+    
+ <div id="container">
+
+
+<label>USENAME</label><input type="text" name="un" required><br><br>
+<label>NAME</label><input type="text" name="nm" required><br><br>
+
+<label>PASSWORD</label><input type="password" name="pwd" id="password" required  /><br><br>
+<label>CONFIRM PASSWORD</label><input type="password" name="cnfpwd" id="confirm_password"  onkeyup='check();' required/>  <span id='message'></span><br><br>
+
+<input type="submit" value="PROCEED" id="btn"> &nbsp;&nbsp;&nbsp; <input type="reset" value="RESET">
+
+  <div class="parent">
+  <a href="login.jsp">BACK</a>
+</div>
+
+
+</div>
+</form> 
+</body>
+    
+    <div class="footer">
+  <p>|| Prasanta Bank ||  ***  Website Designed By: Prasanta Kumar Parida ***</p>
+</div>
+</html>

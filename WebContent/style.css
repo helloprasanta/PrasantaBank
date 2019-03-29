@@ -1,0 +1,127 @@
+body{
+    background-color:#cccccc59;
+    font-family: 'Montserrat', sans-serif;
+}
+.head{
+    background:linear-gradient(#444,#222);
+    height: 420px
+}
+.head-inner{
+    color: #ffffff;
+    text-align: center;
+}
+.cards{
+    color:#808080c7;
+}
+.cuadro_intro_hover{
+    	padding: 0px;
+		position: relative;
+		overflow: hidden;
+		height: 200px;
+      
+   
+	}
+	.cuadro_intro_hover:hover .caption{
+		opacity: 1;
+		transform: translateY(-150px);
+		-webkit-transform:translateY(-150px);
+		-moz-transform:translateY(-150px);
+		-ms-transform:translateY(-150px);
+		-o-transform:translateY(-150px);
+         
+	}
+.cuadro_intro_hover:hover {
+    box-shadow: 0 10px 9px -6px #808080c7;
+    
+}
+	.cuadro_intro_hover img{
+		z-index: 4;
+      
+	}
+	.cuadro_intro_hover .caption{
+		position: absolute;
+		top:150px;
+		-webkit-transition:all 0.3s ease-in-out;
+		-moz-transition:all 0.3s ease-in-out;
+		-o-transition:all 0.3s ease-in-out;
+		-ms-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+		width: 100%;
+        
+	}
+	.cuadro_intro_hover .blur{
+		background-color: #fff;
+		height: 300px;
+		z-index: 5;
+		position: absolute;
+		width: 100%;
+       
+	}
+	.cuadro_intro_hover .caption-text{
+		z-index: 10;
+		color: black;
+		position: absolute;
+		height: 300px;
+		text-align: center;
+		top:-20px;
+		width: 100%;
+         
+    
+	}
+
+.ph-button {
+	
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 9px 25px 11px;
+    font-size: 18px;
+	
+}
+.ph-btn-yellow {
+
+    border-color: #f92;
+    background-color: #F92;
+}
+
+.ph-btn-yellow:hover, .ph-btn-yellow:focus, .ph-btn-yellow:active {
+    background-color: #397CAC;
+    border-color: #326E99;
+    
+}
+.ph-float {
+  width: 22%;
+  padding: 10px;  
+  padding-top: 50px;  
+  text-align: center;
+
+}
+.ph-btn-default {
+
+    border-color: #FFF;
+    background:linear-gradient(#444,#222);
+}
+.ph-clear {
+  
+  clear: both;
+   
+}
+.caption-text h3{
+    font-size: 22px;
+    border-top:2px solid white; 
+    border-bottom:2px solid white;
+    padding:10px;
+}
